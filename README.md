@@ -1,10 +1,12 @@
-
 ## 畫面
 
 > Ideal Furnishings 理想家居網站設計
 
+前台首頁
 ![readme01](https://github.com/vann420/Ideal-Furnishings240402/assets/165571974/b4ec8e11-b583-44f7-9fbe-f32bb6e340ec)
+前台產品分頁
 ![readme03](https://github.com/vann420/Ideal-Furnishings240402/assets/165571974/62fd7989-c6c3-49d8-ba95-1cb8bd3d7035)
+後台首頁
 ![readme02](https://github.com/vann420/Ideal-Furnishings240402/assets/165571974/222637b1-57a1-437d-bc26-c20cde39ab7c)
 
 
