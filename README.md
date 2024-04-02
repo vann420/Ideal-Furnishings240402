@@ -11,12 +11,11 @@
 ## 專案技術
 
 - Bootstrap v5.1.3
+- jQuery v3.7.1
 - fontawesome v6.5.1
 - wow.js
 - animate v.4.0.0
 - owl.carousel v.2.3.4
-
-...
 
 
 ## 功能簡介
@@ -30,7 +29,6 @@
 - 前後台商品上架
 - 商品分類功能
 
-...
 
 
 ## 聯絡作者
