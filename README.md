@@ -1,5 +1,44 @@
-   <h4 >Ideal Furnishings 理想家居專案製作</h4>
-    <P>以SPA一頁式網站作為首頁，分成前後台</P>
- <img src="https://github.com/vann420/Ideal-Furnishings240402/assets/165571974/d5142d94-56d0-4707-b2b9-a1283739e488" alt="">
-    <img src="https://github.com/vann420/Ideal-Furnishings240402/assets/165571974/3ccfd5bb-e7eb-4f33-bff0-adcf4d404e70" alt="">
-    <img src="https://github.com/vann420/Ideal-Furnishings240402/assets/165571974/9d624b3f-eaeb-45ee-bdc6-ac7863a808e5" alt="">
+
+## 畫面
+
+> 可提供 1~3 張圖片，讓觀看者透過 README 了解整體畫面
+
+![範例圖片 1](https://fakeimg.pl/500/)
+![範例圖片 2](https://fakeimg.pl/500/)
+![範例圖片 3](https://fakeimg.pl/500/)
+
+## 專案技術
+
+- Node.js v16.15.0
+- Vue v3.2.20
+- Vite v4.0.4
+- Vue Router v4.0.11
+- Axios v0.24.0
+- Bootstrap v5.1.3
+...
+
+
+## 功能簡介
+
+此專案有使用 Github Actions，所以發起 PR 時會自動執行以下動作：
+
+- 建立 Node.js 環境
+- 安裝相依套件
+- 編譯程式碼
+- 執行 ESLint 掃描
+- 執行測試
+...
+
+## 第三方服務
+
+- Algolia
+- Google Analytics
+...
+
+## 聯絡作者
+
+
+你可以透過以下方式與我聯絡
+
+- [mail](vannwo420@gmail.com)
+
