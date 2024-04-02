@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員管理</title>
+</head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/myall.css">
+<link rel="stylesheet" href="css/spa.css">
+<link href="img/favicon.ico" rel="shortcut icon" />
+<style>
+    .banner {
+        height: 280px;
+        background-image: url(img/sofa10.jpg);
+        background-position: center 60%;
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <!-- section01 navbar-->
+    <div class="fixed-top">
+
+        <!-- section02 navbar-->
+
+        <section>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                <div class="container">
+                    <div class="wow animate__backInDown " data-wow-duration="1s" data-wow-delay="0s"
+                        data-wow-iteration="1">
+                        <a class="navbar-brand" href="#">
+                            <i class="fa-solid fa-couch"></i>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active pe-3 fw-800 " aria-current="page"
+                                    href="admin/ideal_admin_index.html"> IDEAL Furnishings 管理系統</a>
+                            </li>
+                            <li class="nav-item px-4 d-none" id="nav_01">
+                                <a class="nav-link " aria-current="page"
+                                    href="admin/ideal_admin_product_create.html">商品建檔</a>
+                            </li>
+                            <li class="nav-item px-4 d-none" id="nav_02">
+                                <a class="nav-link " aria-current="page"
+                                    href="admin/ideal_admin_product.html">商品管理</a>
+                            </li>
+                            <li class="nav-item px-4 d-none" id="nav_03">
+                                <a class="nav-link " aria-current="page" href="admin/ideal_admin_order.html">訂單管理</a>
+                            </li>
+                            <li class="nav-item px-4 d-none" id="nav_04">
+                                <a class="nav-link active" aria-current="page"
+                                    href="admin/ideal_admin_member_control.html">會員管理</a>
+                            </li>
+
+                        </ul>
+
+                        <div>
+
+
+                            <li class="nav-item dropdown list-unstyled text-light d-none" id="member_list">
+                                <a class="nav-link dropdown-toggle ps-3" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" id="user_message">
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item " href="#" target="_blank">管理員資訊</a></li>
+                                    <li><a class="dropdown-item " href="#" id="logout_btn">管理員登出</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item disabled" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+
+                            <button class="btn btn-outline-warning me-2 " data-bs-toggle="modal"
+                                data-bs-target="#loginModal" id="nav_log_btn">登入</button>
+                            <button class="btn btn-warning me-2 " data-bs-toggle="modal" data-bs-target="#registerModal"
+                                id="nav_reg_btn">註冊</button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </section>
+    </div>
+
+    <!-- section02 loginModal -->
+    <div class="modal fade" id="loginModalAdmin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title" id="exampleModalLabel">管理員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <label for="login_username" class="form-label">帳號</label>
+                    <input type="text" class="form-control" id="loginAdmin_username" name="loginAdmin_username">
+                    <label for="login_password" class="form-label">密碼</label>
+                    <input type="password" class="form-control" id="loginAdmin_password" name="loginAdmin_password">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-warning" id="loginAdmin_btn">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 登入註冊 -->
+    <!-- section02 loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title" id="exampleModalLabel">管理員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <label for="login_username" class="form-label">帳號</label>
+                    <input type="text" class="form-control" id="login_username" name="login_username">
+                    <label for="login_password" class="form-label">密碼</label>
+                    <input type="password" class="form-control" id="login_password" name="login_password">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-warning" id="login_btn">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section02 registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title" id="exampleModalLabel">管理員註冊</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div>
+                                <!-- for取username，點標籤時會帶到輸入框 -->
+                                <label for="username" class="form-label">帳號</label>
+                                <input type="text" class="form-control " placeholder="請輸入6至12字半形英文或數字" id="username"
+                                    name="username">
+                                <div class="valid-feedback">帳號可以使用</div>
+                                <div class="invalid-feedback">帳號不可以使用</div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="form-label">電子郵件</label>
+                                <input type="text" class="form-control" placeholder="請輸入電子郵件信箱" id="email" name="email">
+                                <div class="valid-feedback">格式符合規定</div>
+                                <div class="invalid-feedback">格式不符合規定</div>
+                            </div>
+
+                            <div>
+                                <label for="password" class="form-label">密碼</label>
+                                <input type="password" class="form-control" placeholder="請輸入6至12字半形英文或數字" id="password"
+                                    name="password">
+                                <div class="valid-feedback">字數符合規定</div>
+                                <div class="invalid-feedback">字數不符合規定</div>
+                            </div>
+
+                            <div>
+                                <label for="" class="form-label">確認密碼</label>
+                                <input type="password" class="form-control" placeholder="請確認密碼" id="re_password"
+                                    name="re_password">
+                                <div class="valid-feedback">輸入內容相符</div>
+                                <div class="invalid-feedback">輸入內容不相符</div>
+                            </div>
+
+                            <div class="form-check pt-3">
+                                <input class="form-check-input" type="checkbox" id="chk01" name="chk01">
+                                <label class="form-check-label" for="chk01">
+                                    確認註冊
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-warning" id="reg_btn">註冊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section03 banner -->
+    <div class="banner bg-cover"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <h5 class=" mt-3">會員管理 / 圖表資料</h5>
+            </div>
+            <div class="col-2">
+                <a href="admin/ideal_admin_member_control.html" class="btn btn-warning mt-3">會員管理</a>
+            </div>
+        </div>
+
+
+        <div class="row ">
+
+            <div class="col-md-2 pt-5">
+
+                <ul class="list-group" id="citylist">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        A list item
+                        <span class="badge bg-primary rounded-pill">14</span>
+                    </li>
+
+                </ul>
+            </div>
+  <div class="col-md-4 pt-5">
+                <div class="card">
+                    <div class="card-body m-auto">
+                        <canvas id="myChart02"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 pt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <canvas id="myChart01"></canvas>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+    <script src="js/cookie.js"></script>
+    <script src="js/admin_login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+    <script>
+        
+        var cityTitle = [];
+        var counter = [];
+        var cityData = [];
+        var chart01;
+        var chart02;
+        var city = [];
+
+        $(function () {
+            
+            //產生圖表
+            var ctx02 = document.getElementById('myChart02');
+            
+            chart02 = new Chart(ctx02, {
+                type: 'pie',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: '全台人口分布圖',
+                        data: [],
+                        borderWidth: 2,
+                        backgroundColor: ['#FAA98B', '#E6AECF', '#AEE0DD', '#01ACBD', '#FF445F', '#6F925A', '#FCC5A0', '#ECD1E5', '#B5E5E2', '#6ED8D4', '#D97C59', '#9EC29B'],
+                        color: '#666'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+
+            var ctx01 = document.getElementById('myChart01');
+            chart01 = new Chart(ctx01, {
+                type: 'bar',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: '各區人口分布圖',
+                        data: [],
+                        borderWidth: 2,
+                        backgroundColor: ['#FAA98B', '#E6AECF', '#AEE0DD', '#01ACBD', '#FF445F', '#6F925A'],
+                        color: '#666'
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+
+            //axios串接資料
+            axios.get('member_read_api.php')
+                .then(function (response) {
+
+                    // 假設所有City資料存儲在response.data.data中
+                    for (let i = 0; i < response.data.data.length; i++) {
+                        console.log(response.data.data[i].City);
+                    }
+
+                    // 初始化城市相關數據
+                    var cityData = {};
+                    var cityTitle = {};
+                    totalPopulation = 0;
+
+                    // 處理城市數據
+                    response.data.data.forEach(function (item) {
+                        var city = item.City;
+                        if (!cityData[city]) {
+                            cityData[city] = [];
+                            cityTitle[city] = city;
+                        }
+                        cityData[city].push(item);
+                    });
+
+                    var totalSum = 0;
+                    for (var city in cityData) {
+                        totalSum += cityData[city].length;
+                    }
+                    console.log(totalSum);
+                    console.log(totalSum);
+                    console.log(cityTitle);
+                    console.log(cityData);
+
+                    // 左側縣市選單
+                    $("#citylist").empty();
+                    $("#citylist").append('<li class="list-group-item"><div class="d-flex" data-ptype="allType"><div>' +
+                        '全台縣市' +
+                        '</div><span class="badge rounded-pill text-bg-secondary ms-auto">' +
+                        totalSum +
+                        "</span></div></li>");
+
+                    Object.keys(cityTitle).forEach(function (city) {
+                        var strHTML = '<ul class="list-group" id="citylist"><li class="list-group-item d-flex justify-content-between align-items-center" data-city="' + city + '">' + city + '<span class="badge bg-secondary rounded-pill">' + cityData[city].length + '</span></li></ul>';
+                        $("#citylist").append(strHTML);
+                    });
+
+
+                    // 修正過的程式碼
+                    $("#citylist .list-group-item").bind("click", function () {
+                        var city = $(this).data("city");
+                        console.log(city);
+
+                        // 重構鎮區數據
+                        var townTitle = {};
+                        var townCounter = {};
+                        var townData = {};
+
+                        cityData[city].forEach(function (item) {
+                            var town = item.Town;
+                            if (townCounter[town] === undefined) {
+                                townCounter[town] = Object.keys(townData).length;
+                                townData[town] = [];
+                                townTitle[townCounter[town]] = town;
+                            }
+                            townData[town].push(item);
+                        });
+                        console.log(townTitle);
+                        console.log(townCounter);
+                        console.log(townData);
+
+                        // 更新圖表數據
+
+                        // 更新圖表數據
+
+                        // 清空圖表數據
+                        chart01.data.labels = [];
+                        chart01.data.datasets[0].data = [];
+
+                        // 將新資料添加到圖表中
+                        Object.keys(townTitle).forEach(function (key) {
+                            chart01.data.labels.push(townTitle[key]); // 將鎮區名稱添加到 x 軸標籤
+                            chart01.data.datasets[0].data.push(townData[townTitle[key]].length); // y 軸
+                        });
+
+                        chart01.data.datasets[0].label = city + '各區人口分析表';
+                        chart01.update();
+
+
+                        // 清空全台人口分布圖表數據
+                        chart02.data.labels = [];
+                        chart02.data.datasets[0].data = [];
+
+                        // 將新資料添加到圖表中
+                        Object.keys(cityData).forEach(function (key) {
+                            chart02.data.labels.push(key); // x軸
+                            chart02.data.datasets[0].data.push(cityData[key].length); // y軸
+                        });
+                        chart02.data.labels = Object.keys(cityData);
+                        chart02.data.datasets[0].data = Object.values(cityData).map(city => city.length);
+                        chart02.data.datasets[0].label = '全台人口分布圖';
+                        chart02.update();
+                    });
+
+
+
+
+
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .finally(function () {
+                    // always executed
+                });
+        });
+
+    </script>
+</body>
+
+</html>

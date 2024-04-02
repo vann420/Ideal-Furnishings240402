@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDEAL Furnishings 管理系統</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/myall.css">
+    <link rel="stylesheet" href="css/spa.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <style media="screen">
+        .banner {
+            height: 280px;
+            background-image: url(img/sofa10.jpg);
+            background-position: center 60%;
+            background-size: cover;
+        }
+
+        .s04_img01 {
+            background-image: linear-gradient(10deg, rgba(255, 255, 255, 0.5), rgb(255, 255, 255, 0.95)), url(../img/shop01.jpg);
+            height: 600px;
+            border-radius: 5pt;
+            color: #212529;
+        }
+
+        .s04_img01:hover {
+            background-image: linear-gradient(10deg, rgba(100, 100, 100, 0.5), rgb(0, 0, 0, 0.1)), url(../img/shop01.jpg);
+            height: 600px;
+            border-radius: 5pt;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+            color: white;
+            text-shadow: 0.15em 0.15em 0.25em black;
+        }
+
+        .s04_img02 {
+            background-image: linear-gradient(10deg, rgba(255, 255, 255, 0.5), rgb(255, 255, 255, 0.95)), url(../img/shop02.jpg);
+            height: 600px;
+            border-radius: 5pt;
+            color: #212529;
+        }
+
+        .s04_img02:hover {
+            background-image: linear-gradient(10deg, rgba(100, 100, 100, 0.5), rgb(0, 0, 0, 0.1)), url(../img/shop02.jpg);
+            height: 600px;
+            border-radius: 5pt;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+            color: white;
+            text-shadow: 0.15em 0.15em 0.25em black;
+        }
+
+        .s04_img03 {
+            background-image: linear-gradient(10deg, rgba(255, 255, 255, 0.5), rgb(255, 255, 255, 0.95)), url(../img/shop03.jpg);
+            height: 600px;
+            border-radius: 5pt;
+            color: #212529;
+        }
+
+        .s04_img03:hover {
+            background-image: linear-gradient(10deg, rgba(100, 100, 100, 0.5), rgb(255, 255, 255, 0.95)), url(../img/shop03.jpg);
+            height: 600px;
+            border-radius: 5pt;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+            color: white;
+            text-shadow: 0.15em 0.15em 0.25em black;
+        }
+
+        .s04_img04 {
+            background-image: linear-gradient(10deg, rgba(255, 255, 255, 0.5), rgb(255, 255, 255, 0.95)), url(../img/bed03.jpg);
+            height: 600px;
+            border-radius: 5pt;
+            color: #212529;
+        }
+
+        .s04_img04:hover {
+            background-image: linear-gradient(10deg, rgba(100, 100, 100, 0.5), rgb(255, 255, 255, 0.95)), url(../img/bed03.jpg);
+            height: 600px;
+            border-radius: 5pt;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+            color: white;
+            text-shadow: 0.15em 0.15em 0.25em black;
+        }
+
+     
+    </style>
+
+</head>
+
+<body>
+
+    <!-- section01 navbar-->
+    <div class="fixed-top " id="navbar">
+
+        <!-- section02 navbar-->
+
+        <section>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                <div class="container">
+                    <div class="wow animate__backInDown " data-wow-duration="1s" data-wow-delay="0s"
+                        data-wow-iteration="1">
+                        <a class="navbar-brand" href="#">
+                            <i class="fa-solid fa-couch"></i>
+                        </a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active pe-3 fw-800 " aria-current="page"
+                                    href="/202312/ideal_admin_index.html"> IDEAL Furnishings 管理系統</a>
+                            </li>
+                            <li class="nav-item px-4 d-none" id="nav_01">
+                                <a class="nav-link " aria-current="page"
+                                    href="/202312/ideal_admin_product_create.html">商品建檔</a>
+                            </li>
+                            <li class="nav-item px-4 d-none" id="nav_02">
+                                <a class="nav-link " aria-current="page"
+                                    href="/202312/ideal_admin_product.html">商品管理</a>
+                            </li>
+                            <li class="nav-item px-4 d-none" id="nav_03">
+                                <a class="nav-link " aria-current="page" href="/202312/ideal_admin_order.html">訂單管理</a>
+                            </li>
+                            <li class="nav-item px-4 d-none" id="nav_04">
+                                <a class="nav-link " aria-current="page"
+                                    href="/202312/ideal_admin_member_control.html">會員管理</a>
+                            </li>
+
+                        </ul>
+
+                        <div>
+
+
+                            <li class="nav-item dropdown list-unstyled text-light d-none" id="member_list">
+                                <a class="nav-link dropdown-toggle ps-3" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false" id="user_message">
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item " href="#" target="_blank">管理員資訊</a></li>
+                                    <li><a class="dropdown-item " href="#" id="logout_btn">管理員登出</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item disabled" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+
+                            <button class="btn btn-outline-warning me-2 " data-bs-toggle="modal"
+                                data-bs-target="#loginModal" id="nav_log_btn">登入</button>
+                            <button class="btn btn-warning me-2 " data-bs-toggle="modal" data-bs-target="#registerModal"
+                                id="nav_reg_btn">註冊</button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </section>
+    </div>
+
+  
+
+
+    <!-- 登入註冊 -->
+    <!-- section02 loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title" id="exampleModalLabel">管理員登入</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <label for="login_username" class="form-label">帳號</label>
+                    <input type="text" class="form-control" id="login_username" name="login_username">
+                    <label for="login_password" class="form-label">密碼</label>
+                    <input type="password" class="form-control" id="login_password" name="login_password">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-warning" id="login_btn">登入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section02 registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h5 class="modal-title" id="exampleModalLabel">管理員註冊</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div>
+                                <!-- for取username，點標籤時會帶到輸入框 -->
+                                <label for="username" class="form-label">帳號</label>
+                                <input type="text" class="form-control " placeholder="請輸入6至12字半形英文或數字" id="username"
+                                    name="username">
+                                <div class="valid-feedback">帳號可以使用</div>
+                                <div class="invalid-feedback">帳號不可以使用</div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="form-label">電子郵件</label>
+                                <input type="text" class="form-control" placeholder="請輸入電子郵件信箱" id="email" name="email">
+                                <div class="valid-feedback">格式符合規定</div>
+                                <div class="invalid-feedback">格式不符合規定</div>
+                            </div>
+
+                            <div>
+                                <label for="password" class="form-label">密碼</label>
+                                <input type="password" class="form-control" placeholder="請輸入6至12字半形英文或數字" id="password"
+                                    name="password">
+                                <div class="valid-feedback">字數符合規定</div>
+                                <div class="invalid-feedback">字數不符合規定</div>
+                            </div>
+
+                            <div>
+                                <label for="" class="form-label">確認密碼</label>
+                                <input type="password" class="form-control" placeholder="請確認密碼" id="re_password"
+                                    name="re_password">
+                                <div class="valid-feedback">輸入內容相符</div>
+                                <div class="invalid-feedback">輸入內容不相符</div>
+                            </div>
+
+                            <div class="form-check pt-3">
+                                <input class="form-check-input" type="checkbox" id="chk01" name="chk01">
+                                <label class="form-check-label" for="chk01">
+                                    確認註冊
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-warning" id="reg_btn">註冊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- section03 banner -->
+    <div class="banner bg-cover"></div>
+
+
+
+    <!-- section04 -->
+    <section id="s04" class="d-none">
+        <div class="container py-4">
+            <h5 class=" mb-2">管理系統 / 首頁</h5>
+            <div class="row ">
+                <div class="col-md-3 mb-5">
+                    <a href="/202312/ideal_admin_product_create.html">
+                        <div class="bg-cover my-1 s04_img01 position-relative">
+                            <div class="s12_text position-absolute top-50 start-50 translate-middle text-center">
+                                <i class="fa-solid fa-pen-to-square fa-3x"></i>
+                                <h5 class="mt-2 fw-800">商品建檔</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 mb-5">
+                    <a href="/202312/ideal_admin_product.html">
+                        <div class="bg-cover my-1 s04_img02 position-relative">
+                            <div class="s12_text position-absolute top-50 start-50 translate-middle text-center">
+                                <i class="fa-solid fa-couch fa-3x"></i>
+                                <h5 class="mt-2 fw-800">商品管理</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <a href="/202312/ideal_admin_order.html">
+                        <div class="bg-cover my-1 s04_img03 position-relative">
+                            <div class="s12_text position-absolute top-50 start-50 translate-middle text-center">
+                                <i class="fa-solid fa-cart-shopping fa-3x"></i>
+                                <h5 class="mt-2 fw-800">訂單管理</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 mb-5">
+                    <a href="/202312/ideal_admin_member_control.html">
+                        <div class="bg-cover my-1 s04_img04 position-relative">
+                            <div class="s12_text position-absolute top-50 start-50 translate-middle text-center">
+                                <i class="fa-solid fa-user fa-3x"></i>
+                                <h5 class="mt-2 fw-800">會員管理</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section05 -->
+    <div class="container d-none">
+        <form>
+            <h3>管理員登入</h3>
+
+            <label for="username">帳號</label>
+            <input type="text" placeholder="Username" id="login_username" name="login_username">
+
+            <label for="password">密碼</label>
+            <input type="password" placeholder="Password" id="login_password" name="login_password">
+
+            <button id="login_btn"  type="button">登入</button>
+
+
+        </form>
+    </div>
+
+
+    <!-- footer -->
+    <section>
+        <ul class="nav justify-content-center bg-dark fixed-bottom d-none" id="footer">
+
+            <li class="nav-item">
+                <a class="nav-link disabled " href="#" tabindex="-1" aria-disabled="true"> IDEAL Furnishings @
+                    2024</a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.4/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/my_owl_carousel.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/scrollToTop.js"></script>
+    <script src="js/admin_login.js"></script>
+    <script>
+
+
+
+    </script>
+</body>
+
+</html>
