@@ -1,0 +1,181 @@
+body {
+    background-color: var(--mycolor01);
+    padding-top: 15px;
+    
+}
+
+.wrapper {
+    width: 1024px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    background-color: var(--mycolor02);
+    text-align: center;
+}
+
+nav ul {
+    /*選單元素可在同一行內呈現，圖片或文字均不換行，也不會影響其版面配置，元素寬度預設會撐到最大，使其占滿整個容器*/
+    display: inline-block;
+}
+
+nav ul li {
+    /*沒有點點*/
+    list-style-type: none;
+
+    /*排成橫式*/
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* background-color: #e4e4e4;  背景色檢查位置，之後可以刪掉*/
+
+    /*左右間距*/
+    margin-right: 5px;
+
+    /*取消底線*/
+    text-decoration: none;
+
+    /*文字顏色*/
+    color: var(--mycolor03);
+
+    /*粗體字*/
+    /* font-weight: bolder; */
+
+    font-size: 14pt;
+    font-family:'Zen Maru Gothic';
+   
+}
+
+/*游標移動的效果*/
+nav ul li a:hover {
+    background-color:var(--mycolor04);
+
+}
+
+.sidebar{
+    background-color: var(--mycolor02);
+    width: 120px;
+    /* 80vh為瀏覽器高度的50% */
+    height: 40vh;
+    float: left;
+    margin-right: 50px;
+    margin-top: 0px;
+
+}
+
+.sidebar ul li {
+   
+    list-style-type: none;
+}
+
+.sidebar ul li a{
+    display: block;
+    background-color: var(--mycolor03);
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 12pt;
+    font-weight: 600;
+    color: var(--mycolor02);
+    border-radius: 15px;
+    border:3px ;
+    border-style:solid;
+}
+
+.content_in {
+    padding-top: 10px;
+    padding-bottom: 45px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: 120px;
+    margin-top: 0;
+  
+    background-color: var(--mycolor03);
+
+    /*選單到內文的上下間隔*/
+    margin-top: 5px;
+}
+
+.content_in h1 {
+    text-align: center;
+    color: var(--mycolor04);
+   
+}
+
+.content_in p {
+    font-size: 12pt;
+    color: var(--mycolor07);
+    margin-left: 50px;
+    margin-right: 50px;
+
+    /* 每段的間距 */
+    margin-bottom: 30px;
+}
+
+.content_in a {
+    display: block;
+    width: 120px;
+    height: 40px;
+    background-color: var(--mycolor02);
+    color: var(--mycolor03);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+  
+    /* 垂直置中，高度要和height一樣，所以設成40px */
+    line-height: 40px;  
+}
+
+.content_in a:hover {
+    background-color: var(--mycolor04);
+}
+.footer{
+   
+    background-color: var(--mycolor02);
+    text-align: center;
+}
+.footer p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 0;
+    font-size: 10pt;
+    color: var(--mycolor03);
+}
+
+/* 切換行動裝置時畫面隨介面縮放 */
+@media screen and (max-width:1024px) {
+    .wrapper {
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+        height: auto;
+      text-align: center;
+    }
+    .sidebar ul{
+        display: inline-block;
+    }
+    .sidebar ul li{
+        float: left;
+        margin-right: 5px;
+    }
+}

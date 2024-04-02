@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+
+
+:root {
+    --mycolor01: #e8e5e5;
+    --mycolor02: #68b8b8;
+    --mycolor03: #fbfbfb;
+    --mycolor04: #2ea4a4;
+    --mycolor05: #f2fafa;
+    --mycolor06:#a7ebe8;
+    --mycolor07: #121212;
+    /* .5 小數點是透明度 */
+    --tspcolor02:rgb(191, 217, 178,.2);
+    --tspcolor05:rgb(99, 115, 92,.5);
+    --tspcolor08:rgb(55, 64, 51,.8);
+
+    --fontcolor01:#374033;
+
+}
+
+
+/* 外層relative, 內層absolute */
+.section01{
+    /* background-color: var(--mycolor01); */
+    
+    height: 100vh;
+    position: relative;
+}
+
+.section01 .box01{
+    /* background-color: var(--mycolor05); */
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section01 .box02{
+    /* background-color: var(--mycolor05); */
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.section01 .box03{
+    /* background-color: var(--mycolor05); */
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.section01 .box04{
+    /* background-color: var(--mycolor05); */
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.section01 .logoimg{
+    position: absolute;
+    background-color: var(--mycolor03);
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    /*  bgi 背景圖無法右鍵存圖 */
+    background-image: url(/img/indoor-houseplants-corner-parquet-floor.jpg);
+    /* bgp 對齊中心 */
+    background-position: center center;
+    /* bgs 配合圖片比例縮放 */
+    background-size: cover;
+    /* bga 圖片配合頁面滑動 */
+    background-attachment: fixed;
+}
+
+.section01 .user_text{
+    position: absolute;
+    top: 50%;
+    /* 讓元件左右置中，left  transform通常寫在一起 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--fontcolor01);
+    background-color: var(--tspcolor02);
+    padding: 15px;
+    border-radius: 5px;
+    /* 陰影:1上下 2左右 3模糊度
+    4正值將導致陰影擴大並變大，負值將導致陰影縮小
+    5 顏色
+     */
+    box-shadow: 2px 2px 2px 2px var(--tspcolor08) ;
+
+}
+
+.section01 .user_text h1{
+    font-weight: 800;
+    font-family: 'Zen Old Mincho', 'Klee One',serif;
+    text-shadow: 5px 5px 2px 2px var(--tspcolor08) ;
+}
+
+.section01 .user_text h2{
+    font-family: 'Zen Old Mincho', 'Klee One',serif;
+}
+
+.section01 .user_text p{
+    font-size: 12pt;
+}
+
+/* 第二部分圖片選單 */
+.section02{
+    position: relative;
+    height: 360px;
+    margin-top: 15px;
+}
+
+.section02 .section02_box01{
+    background-color: var(--mycolor01);
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 10%;
+    text-align: center;
+    line-height: 250px;
+    background-image: url(https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+border-radius: 50%;
+box-shadow: 5px 5px 6px 2px var(--tspcolor08) ;
+}
+
+.section02 .section02_box01 a{
+    text-decoration: none;
+    font-size: 18pt;
+    color: var(--mycolor03);
+}
+
+.section02 .section02_box01:hover{
+    opacity:0.8;
+}
+
+.section02 .section02_box02{
+    background-color: var(--mycolor01);
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 40%;
+    text-align: center;
+    line-height: 250px;
+    background-image: url(https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+border-radius: 50%;
+box-shadow: 5px 5px 6px 2px var(--tspcolor08) ;
+}
+
+.section02 .section02_box02 a{
+    text-decoration: none;
+    font-size: 18pt;
+    color: var(--mycolor03);
+}
+
+.section02 .section02_box02:hover{
+    opacity:0.8;
+}
+
+.section02 .section02_box03{
+    background-color: var(--mycolor01);
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 70%;
+    text-align: center;
+    line-height: 250px;
+    background-image: url(https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+border-radius: 50%;
+box-shadow: 5px 5px 6px 2px var(--mycolor10) ;
+}
+
+.section02 .section02_box03 a{
+    text-decoration: none;
+    font-size: 18pt;
+    color: var(--mycolor03);
+}
+
+.section02 .section02_box03:hover{
+    opacity:0.8;
+}

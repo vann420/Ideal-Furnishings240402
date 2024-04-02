@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap');
+
+:root {
+    --mycolor01: #e8e5e5;
+    --mycolor02: #68b8b8;
+    --mycolor03: #fbfbfb;
+    --mycolor04: #2ea4a4;
+    --mycolor05: #f2fafa;
+    --mycolor06:#a7ebe8;
+    --mycolor07: #121212;
+    --mycolor08:#fff;
+    --mycolor09:#018093;
+    --mycolor10:#FEFECD;
+    --mycolor11:#A58E74;
+    --mycolor12:#E09132;
+    --mycolor13:#424530;
+    --mycolor14:#bbbbbb;
+    /* .5 小數點是透明度 */
+    --tspcolor02:rgb(191, 217, 178,.2);
+    --tspcolor05:rgb(99, 115, 92,.5);
+    --tspcolor08:rgb(55, 64, 51,.8);
+    --tspcolor00:rgb(55, 64, 51,.0);
+    --tspcolor13:rgb(66, 69, 48, .5);
+    --tspcolor11: rgb(254, 254, 205, .5);
+    --tspcolor11: rgb(165, 142, 116, .5);
+    --fontcolor01:#374033;
+
+}
+
+
+
+.bg-cover{
+     /* bgp 對齊中心 */
+     background-position: center center;
+     /* bgs 配合圖片比例縮放 */
+     background-size: cover;
+}
+
+/* 文字相關 */
+body {
+    font-family: 'Noto Sans TC', sans-serif,'Zen Maru Gothic', serif,'Dela Gothic One', 'Yusei Magic';
+}
+
+/* 文字陰影 */
+.text-shadow{
+    text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+
+/* 框框 */
+.demo {
+    width: 70%;
+    padding: 15px;
+    margin: 5px;
+    border: 2px solid var(--mycolor14);
+    color: var(--fontcolor01);
+}
+
+
+
+
+/* 文字粗細 */
+.fw-100 {
+    font-weight: 100;
+}
+
+.fw-200 {
+    font-weight: 200;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.f-zenmaru {
+    font-family: 'Zen Maru Gothic', serif;
+}
+
+.f-dela{
+    font-family: 'Dela Gothic One', sans-serif;
+}
+
+.f-yusei{
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.f-{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mr-1{
+    margin-right: 1px;
+}
+
+.mr-2{
+    margin-right: 2px;
+}
+
+.mr-3{
+    margin-right: 3px;
+}
+
+.mr-4{
+    margin-right: 4px;
+}
+
+.mr-5{
+    margin-right: 5px;
+}

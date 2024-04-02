@@ -1,0 +1,63 @@
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom:  30px;
+    right: 30px;
+    background-color: #212529;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    /* 使按鈕成為正圓形 */
+    width: 80px;
+    /* 設置按鈕寬度 */
+    height: 80px;
+    /* 設置按鈕高度 */
+    cursor: pointer;
+    z-index: 20;
+    transition: background-color 1s;
+    /* 添加過渡效果 */
+    scroll-behavior: smooth;
+}
+
+#scrollToTopBtn:hover {
+    color: #ffc107;
+    /* 滑鼠懸停時的背景顏色 */
+}
+
+@media screen and (max-width: 768px) {
+    #scrollToTopBtn {
+        display: none;
+    }
+}
+
+#scrollToBottomBtn {
+    display: none;
+    position: fixed;
+    bottom:  30px;
+    right: 30px;
+    background-color: #212529;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    /* 使按鈕成為正圓形 */
+    width: 80px;
+    /* 設置按鈕寬度 */
+    height: 80px;
+    /* 設置按鈕高度 */
+    cursor: pointer;
+    z-index: 20;
+    transition: background-color 1s;
+    /* 添加過渡效果 */
+    scroll-behavior: smooth;
+}
+
+#scrollToBottomBtn:hover {
+    color: #ffc107;
+    /* 滑鼠懸停時的背景顏色 */
+}
+
+@media screen and (max-width: 768px) {
+    #scrollToBottomBtn {
+        display: none;
+    }
+}

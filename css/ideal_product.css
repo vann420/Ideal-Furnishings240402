@@ -1,0 +1,40 @@
+.banner {
+    height: 360px;
+    background-image: url(../img/sofa05.jpg);
+    background-position: center 60%;
+    background-size: cover;
+  }
+
+  h3 {
+    color: var(--mycolor12);
+  }
+
+  .container h5 {
+    color: var(--mycolor13);
+  }
+
+
+  .box h5:hover {
+    color: var(--mycolor12);
+  }
+
+  p {
+    color: var(--mycolor13);
+  }
+
+  .pimg01 {
+    border-radius: 5pt;
+  }
+
+
+  ul {
+    padding-top: 5px;
+    font-size: 12pt;
+  }
+
+
+  .box:hover {
+    background-color: #eeeeee;
+    border-radius: 5px;
+
+  }
